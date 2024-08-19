@@ -5,8 +5,8 @@ const Modal = ({ onClose, isOpen, children }) => {
   return createPortal(
     <>
       {isOpen && (
-        <>
-          <div className="relative m-auto z-50 min-h-[200px] max-w-[80%] bg-white p-4">
+        <div className=" grid place-items-center z-40 backdrop-blur h-screen w-screen absolute top-0">
+          <div className="relative m-auto z-50 min-h-[200px] min-w-[30%] bg-white p-4 rounded-md">
             <div className="flex justify-end">
               <IoClose
                 onClick={onClose}
@@ -15,11 +15,7 @@ const Modal = ({ onClose, isOpen, children }) => {
             </div>
             {children}
           </div>
-          <div
-            onClick={onClose}
-            className="z-40 backdrop-blur h-screen w-screen absolute top-0"
-          />
-        </>
+        </div>
       )}
     </>,
     document.getElementById("modal-root")
