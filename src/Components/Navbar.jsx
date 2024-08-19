@@ -6,7 +6,6 @@ const Navbar = () => {
       <img src="firebase.svg" alt="" />
       <h1 className="flex justify-center items-center text-2xl">
         Firebase Contact App
-        <FcCloseUpMode />
       </h1>
     </div>
   );

@@ -55,19 +55,19 @@ const AddandUpdate = ({ isOpen, onClose, isUpdate, contact }) => {
           <Form className="flex flex-col gap-4">
             <div className="flex flex-col gap-1">
               <label htmlFor="name">Name</label>
-              <Field name="name" className="h-10 border" />
+              <Field name="name" className="h-10 border pl-2" />
               <div className="text-red-500 text-xs">
                 <ErrorMessage name="name" />
               </div>
             </div>
             <div className="flex flex-col gap-1">
               <label htmlFor="email">email</label>
-              <Field name="email" className="h-10 border" />
+              <Field name="email" className="h-10 border pl-2" />
               <div className="text-red-500 text-xs">
                 <ErrorMessage name="email" />
               </div>
             </div>
-            <button className="border  p-3 bg-orange self-end">
+            <button className="border text-white p-2 bg-orange self-end rounded-sm">
               {isUpdate ? "update" : "add"} contact
             </button>
           </Form>
