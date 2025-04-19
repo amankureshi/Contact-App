@@ -7,7 +7,7 @@ import * as Yup from "yup";
 
 const contactSchemaValidation = Yup.object().shape({
   name: Yup.string().required("Name is Required"),
-  email: Yup.string().email("Invalid Emai;").required("Email is Required"),
+  email: Yup.string().email("Invalid Email;").required("Email is Required"),
 });
 
 const AddandUpdate = ({ isOpen, onClose, isUpdate, contact }) => {
@@ -67,7 +67,10 @@ const AddandUpdate = ({ isOpen, onClose, isUpdate, contact }) => {
                 <ErrorMessage name="email" />
               </div>
             </div>
-            <button className="border text-white p-2 bg-orange self-end rounded-sm">
+            <button
+              className="border text-white p-2 bg-orange self-end rounded-sm"
+              type="submit"
+            >
               {isUpdate ? "update" : "add"} contact
             </button>
           </Form>
